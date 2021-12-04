@@ -6,6 +6,13 @@ provider:
   runtime: nodejs12.x
   lambdaHashingVersion: 20201221
   profile: serverlessUser
+  environment:
+        tableName: player-points
+  iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - dynamodb:*
+        Resource: '*'
 
 plugins:
     - serverless-s3-sync
@@ -16,6 +23,14 @@ functions:
         events:
             - http:
                   path: get-user/{ID}
+                  method: GET
+                  cors: true
+
+    getPlayerScore:
+        handler: lambdas/endpoints/getPlayerScore.handler
+        events:
+            - http:
+                  path: get-player-score/{ID}
                   method: GET
                   cors: true
 
