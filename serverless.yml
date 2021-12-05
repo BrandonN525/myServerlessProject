@@ -34,6 +34,14 @@ functions:
                   method: GET
                   cors: true
 
+    createPlayerScore:
+        handler: lambdas/endpoints/createPlayerScore.handler
+        events:
+            - http:
+                  path: create-player-score/{ID}
+                  method: POST
+                  cors: true
+
 resources:
     Resources:
         DemoBucketUpload:
