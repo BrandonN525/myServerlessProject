@@ -8,10 +8,12 @@ provider:
   profile: serverlessUser
   environment:
         tableName: player-points
+        bucketName: upload-bucket-100015
   iamRoleStatements:
       - Effect: Allow
         Action:
           - dynamodb:*
+          - s3:*
         Resource: '*'
 
 plugins:
@@ -42,6 +44,14 @@ functions:
                   method: POST
                   cors: true
 
+    createFile:
+        handler: lambdas/endpoints/createFile.handler
+        events:
+            - http:
+                  path: create-file/{fileName}
+                  method: POST
+                  cors: true
+
 resources:
     Resources:
         DemoBucketUpload:
@@ -65,3 +75,8 @@ custom:
     s3Sync:
         - bucketName: serverlessbucket10015
           localDir: UploadData
+
+    s3UploadBucket:
+        Type: AWS::S3::Bucket
+        Properties:
+            BucketName: upload-bucket-100015
