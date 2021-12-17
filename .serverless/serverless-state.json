@@ -216,7 +216,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getUser.handler",
               "Runtime": "nodejs12.x",
@@ -247,7 +247,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -278,7 +278,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -309,7 +309,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createFile.handler",
               "Runtime": "nodejs12.x",
@@ -340,7 +340,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getFile.handler",
               "Runtime": "nodejs12.x",
@@ -1016,7 +1016,7 @@
               "GetFileLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1639718261739": {
+          "ApiGatewayDeployment1639719324632": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1667,7 +1667,7 @@
     "artifact": "C:\\Users\\brand\\myServerlessProject\\.serverless\\myserverlessproject.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639718265415-2021-12-17T05:17:45.415Z",
+    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z",
     "artifact": "myserverlessproject.zip"
   }
 }
