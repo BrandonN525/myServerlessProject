@@ -216,7 +216,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getUser.handler",
               "Runtime": "nodejs12.x",
@@ -247,7 +247,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -278,7 +278,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -309,7 +309,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createFile.handler",
               "Runtime": "nodejs12.x",
@@ -340,7 +340,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getFile.handler",
               "Runtime": "nodejs12.x",
@@ -364,54 +364,54 @@
               "GetFileLogGroup"
             ]
           },
-          "GetUserLambdaVersiongwFTvyOIDVIRTxBadFyq9V4gT6nFUaVJBKTZm2wT40": {
+          "GetUserLambdaVersionR6C7TQ6TXGCS35FLjf0Twu7g8CH3wKuYTmSiYS9DXY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetUserLambdaFunction"
               },
-              "CodeSha256": "dvpLUqrXwXX0qORtoBFzjl3Q3FJ1ev6dA6sUtQ/kWK4="
+              "CodeSha256": "t79emPnxN448IGdbSHt3BAPN4zAM3Il/UYSm3nhfG/o="
             }
           },
-          "GetPlayerScoreLambdaVersionjBndTTal90vNFKjG7RhTLnKBYiRcvI01BVY6Z3OeqOk": {
+          "GetPlayerScoreLambdaVersionn9Lqw62v1J5xlCrplD3GGMUWlcZkkGZwKat3y48JNo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetPlayerScoreLambdaFunction"
               },
-              "CodeSha256": "dvpLUqrXwXX0qORtoBFzjl3Q3FJ1ev6dA6sUtQ/kWK4="
+              "CodeSha256": "t79emPnxN448IGdbSHt3BAPN4zAM3Il/UYSm3nhfG/o="
             }
           },
-          "CreatePlayerScoreLambdaVersionyVKebgeMMsUMi51uHBmv29mvp9TKtrwpfmQyThWCVU": {
+          "CreatePlayerScoreLambdaVersionbrqWYVA9KcyNFq8nM5YBFboDNRULFOW9sexCcBaIwiM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreatePlayerScoreLambdaFunction"
               },
-              "CodeSha256": "dvpLUqrXwXX0qORtoBFzjl3Q3FJ1ev6dA6sUtQ/kWK4="
+              "CodeSha256": "t79emPnxN448IGdbSHt3BAPN4zAM3Il/UYSm3nhfG/o="
             }
           },
-          "CreateFileLambdaVersionXXlPuDghMWLFSRSOCn04WN2yArlaw162w2KiyiCOWw": {
+          "CreateFileLambdaVersions3A4WWCQzOPwcSn8v1xi2zwGylRtaUzrExxNb5zio": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateFileLambdaFunction"
               },
-              "CodeSha256": "dvpLUqrXwXX0qORtoBFzjl3Q3FJ1ev6dA6sUtQ/kWK4="
+              "CodeSha256": "t79emPnxN448IGdbSHt3BAPN4zAM3Il/UYSm3nhfG/o="
             }
           },
-          "GetFileLambdaVersion5V5UvaIpGHutzxXxydb7GyJmAAeLy0yvN3UlBZIB5w": {
+          "GetFileLambdaVersionUTasJBLtrJUDj2YRPPZ98OQzKeEeQTwp6bpIWoH0k": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetFileLambdaFunction"
               },
-              "CodeSha256": "dvpLUqrXwXX0qORtoBFzjl3Q3FJ1ev6dA6sUtQ/kWK4="
+              "CodeSha256": "t79emPnxN448IGdbSHt3BAPN4zAM3Il/UYSm3nhfG/o="
             }
           },
           "ApiGatewayRestApi": {
@@ -1016,7 +1016,7 @@
               "GetFileLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1639719324632": {
+          "ApiGatewayDeployment1639719785860": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1260,7 +1260,7 @@
           "GetUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetUserLambdaVersiongwFTvyOIDVIRTxBadFyq9V4gT6nFUaVJBKTZm2wT40"
+              "Ref": "GetUserLambdaVersionR6C7TQ6TXGCS35FLjf0Twu7g8CH3wKuYTmSiYS9DXY"
             },
             "Export": {
               "Name": "sls-myserverlessproject-dev-GetUserLambdaFunctionQualifiedArn"
@@ -1269,7 +1269,7 @@
           "GetPlayerScoreLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetPlayerScoreLambdaVersionjBndTTal90vNFKjG7RhTLnKBYiRcvI01BVY6Z3OeqOk"
+              "Ref": "GetPlayerScoreLambdaVersionn9Lqw62v1J5xlCrplD3GGMUWlcZkkGZwKat3y48JNo"
             },
             "Export": {
               "Name": "sls-myserverlessproject-dev-GetPlayerScoreLambdaFunctionQualifiedArn"
@@ -1278,7 +1278,7 @@
           "CreatePlayerScoreLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreatePlayerScoreLambdaVersionyVKebgeMMsUMi51uHBmv29mvp9TKtrwpfmQyThWCVU"
+              "Ref": "CreatePlayerScoreLambdaVersionbrqWYVA9KcyNFq8nM5YBFboDNRULFOW9sexCcBaIwiM"
             },
             "Export": {
               "Name": "sls-myserverlessproject-dev-CreatePlayerScoreLambdaFunctionQualifiedArn"
@@ -1287,7 +1287,7 @@
           "CreateFileLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateFileLambdaVersionXXlPuDghMWLFSRSOCn04WN2yArlaw162w2KiyiCOWw"
+              "Ref": "CreateFileLambdaVersions3A4WWCQzOPwcSn8v1xi2zwGylRtaUzrExxNb5zio"
             },
             "Export": {
               "Name": "sls-myserverlessproject-dev-CreateFileLambdaFunctionQualifiedArn"
@@ -1296,7 +1296,7 @@
           "GetFileLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetFileLambdaVersion5V5UvaIpGHutzxXxydb7GyJmAAeLy0yvN3UlBZIB5w"
+              "Ref": "GetFileLambdaVersionUTasJBLtrJUDj2YRPPZ98OQzKeEeQTwp6bpIWoH0k"
             },
             "Export": {
               "Name": "sls-myserverlessproject-dev-GetFileLambdaFunctionQualifiedArn"
@@ -1466,7 +1466,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetUserLambdaVersiongwFTvyOIDVIRTxBadFyq9V4gT6nFUaVJBKTZm2wT40"
+        "versionLogicalId": "GetUserLambdaVersionR6C7TQ6TXGCS35FLjf0Twu7g8CH3wKuYTmSiYS9DXY"
       },
       "getPlayerScore": {
         "handler": "lambdas/endpoints/getPlayerScore.handler",
@@ -1501,7 +1501,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetPlayerScoreLambdaVersionjBndTTal90vNFKjG7RhTLnKBYiRcvI01BVY6Z3OeqOk"
+        "versionLogicalId": "GetPlayerScoreLambdaVersionn9Lqw62v1J5xlCrplD3GGMUWlcZkkGZwKat3y48JNo"
       },
       "createPlayerScore": {
         "handler": "lambdas/endpoints/createPlayerScore.handler",
@@ -1536,7 +1536,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "CreatePlayerScoreLambdaVersionyVKebgeMMsUMi51uHBmv29mvp9TKtrwpfmQyThWCVU"
+        "versionLogicalId": "CreatePlayerScoreLambdaVersionbrqWYVA9KcyNFq8nM5YBFboDNRULFOW9sexCcBaIwiM"
       },
       "createFile": {
         "handler": "lambdas/endpoints/createFile.handler",
@@ -1571,7 +1571,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "CreateFileLambdaVersionXXlPuDghMWLFSRSOCn04WN2yArlaw162w2KiyiCOWw"
+        "versionLogicalId": "CreateFileLambdaVersions3A4WWCQzOPwcSn8v1xi2zwGylRtaUzrExxNb5zio"
       },
       "getFile": {
         "handler": "lambdas/endpoints/getFile.handler",
@@ -1606,7 +1606,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetFileLambdaVersion5V5UvaIpGHutzxXxydb7GyJmAAeLy0yvN3UlBZIB5w"
+        "versionLogicalId": "GetFileLambdaVersionUTasJBLtrJUDj2YRPPZ98OQzKeEeQTwp6bpIWoH0k"
       }
     },
     "resources": {
@@ -1667,7 +1667,7 @@
     "artifact": "C:\\Users\\brand\\myServerlessProject\\.serverless\\myserverlessproject.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639719328160-2021-12-17T05:35:28.160Z",
+    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z",
     "artifact": "myserverlessproject.zip"
   }
 }
