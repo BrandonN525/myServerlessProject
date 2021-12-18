@@ -15,6 +15,27 @@ provider:
           - dynamodb:*
           - s3:*
         Resource: '*'
+  apiGateway:
+        apiKeys: 
+            - free:
+                - APIKey4
+            - paid:
+                - MyPaidKey4  
+        usagePlan:
+            - free:
+                quota:
+                    limit: 10
+                    period: MONTH
+                throttle:
+                    burstLimit: 2
+                    rateLimit: 1
+            - paid:
+                quota:
+                    limit: 1000
+                    period: MONTH
+                throttle:
+                    burstLimit: 20
+                    rateLimit: 10
 
 plugins:
     - serverless-s3-sync
@@ -27,6 +48,7 @@ functions:
                   path: get-user/{ID}
                   method: GET
                   cors: true
+                  private: true
 
     getPlayerScore:
         handler: lambdas/endpoints/getPlayerScore.handler
@@ -35,6 +57,7 @@ functions:
                   path: get-player-score/{ID}
                   method: GET
                   cors: true
+                  private: true
 
     createPlayerScore:
         handler: lambdas/endpoints/createPlayerScore.handler
@@ -43,6 +66,7 @@ functions:
                   path: create-player-score/{ID}
                   method: POST
                   cors: true
+                  private: true
 
     createFile:
         handler: lambdas/endpoints/createFile.handler
@@ -51,6 +75,7 @@ functions:
                   path: create-file/{fileName}
                   method: POST
                   cors: true
+                  private: true
 
     getFile:
         handler: lambdas/endpoints/getFile.handler
@@ -59,6 +84,7 @@ functions:
                   path: get-file/{fileName}
                   method: GET
                   cors: true
+                  private: true
 
 resources:
     Resources:

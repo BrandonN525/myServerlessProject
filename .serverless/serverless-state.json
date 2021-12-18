@@ -23,6 +23,46 @@
           "Resource": "*"
         }
       ],
+      "apiGateway": {
+        "apiKeys": [
+          {
+            "free": [
+              "APIKey4"
+            ]
+          },
+          {
+            "paid": [
+              "MyPaidKey4"
+            ]
+          }
+        ],
+        "usagePlan": [
+          {
+            "free": {
+              "quota": {
+                "limit": 10,
+                "period": "MONTH"
+              },
+              "throttle": {
+                "burstLimit": 2,
+                "rateLimit": 1
+              }
+            }
+          },
+          {
+            "paid": {
+              "quota": {
+                "limit": 1000,
+                "period": "MONTH"
+              },
+              "throttle": {
+                "burstLimit": 20,
+                "rateLimit": 10
+              }
+            }
+          }
+        ]
+      },
       "stage": "dev",
       "region": "us-east-1",
       "versionFunctions": true,
@@ -216,7 +256,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getUser.handler",
               "Runtime": "nodejs12.x",
@@ -247,7 +287,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -278,7 +318,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createPlayerScore.handler",
               "Runtime": "nodejs12.x",
@@ -309,7 +349,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/createFile.handler",
               "Runtime": "nodejs12.x",
@@ -340,7 +380,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z/myserverlessproject.zip"
+                "S3Key": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z/myserverlessproject.zip"
               },
               "Handler": "lambdas/endpoints/getFile.handler",
               "Runtime": "nodejs12.x",
@@ -797,7 +837,7 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "ApiKeyRequired": false,
+              "ApiKeyRequired": true,
               "AuthorizationType": "NONE",
               "Integration": {
                 "IntegrationHttpMethod": "POST",
@@ -843,7 +883,7 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "ApiKeyRequired": false,
+              "ApiKeyRequired": true,
               "AuthorizationType": "NONE",
               "Integration": {
                 "IntegrationHttpMethod": "POST",
@@ -889,7 +929,7 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "ApiKeyRequired": false,
+              "ApiKeyRequired": true,
               "AuthorizationType": "NONE",
               "Integration": {
                 "IntegrationHttpMethod": "POST",
@@ -935,7 +975,7 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "ApiKeyRequired": false,
+              "ApiKeyRequired": true,
               "AuthorizationType": "NONE",
               "Integration": {
                 "IntegrationHttpMethod": "POST",
@@ -981,7 +1021,7 @@
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "ApiKeyRequired": false,
+              "ApiKeyRequired": true,
               "AuthorizationType": "NONE",
               "Integration": {
                 "IntegrationHttpMethod": "POST",
@@ -1016,7 +1056,7 @@
               "GetFileLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1639719785860": {
+          "ApiGatewayDeployment1639805155254": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1036,6 +1076,110 @@
               "ApiGatewayMethodCreateDashfileFilenameVarPost",
               "ApiGatewayMethodGetDashfileFilenameVarGet"
             ]
+          },
+          "ApiGatewayApiKeyFree1": {
+            "Type": "AWS::ApiGateway::ApiKey",
+            "Properties": {
+              "Enabled": true,
+              "Name": "APIKey4",
+              "StageKeys": [
+                {
+                  "RestApiId": {
+                    "Ref": "ApiGatewayRestApi"
+                  },
+                  "StageName": "dev"
+                }
+              ]
+            },
+            "DependsOn": "ApiGatewayDeployment1639805155254"
+          },
+          "ApiGatewayApiKeyPaid1": {
+            "Type": "AWS::ApiGateway::ApiKey",
+            "Properties": {
+              "Enabled": true,
+              "Name": "MyPaidKey4",
+              "StageKeys": [
+                {
+                  "RestApiId": {
+                    "Ref": "ApiGatewayRestApi"
+                  },
+                  "StageName": "dev"
+                }
+              ]
+            },
+            "DependsOn": "ApiGatewayDeployment1639805155254"
+          },
+          "ApiGatewayUsagePlanFree": {
+            "Type": "AWS::ApiGateway::UsagePlan",
+            "DependsOn": "ApiGatewayDeployment1639805155254",
+            "Properties": {
+              "ApiStages": [
+                {
+                  "ApiId": {
+                    "Ref": "ApiGatewayRestApi"
+                  },
+                  "Stage": "dev"
+                }
+              ],
+              "Description": "Usage plan \"free\" for myserverlessproject dev stage",
+              "UsagePlanName": "myserverlessproject-free-dev",
+              "Quota": {
+                "Limit": 10,
+                "Period": "MONTH"
+              },
+              "Throttle": {
+                "BurstLimit": 2,
+                "RateLimit": 1
+              }
+            }
+          },
+          "ApiGatewayUsagePlanPaid": {
+            "Type": "AWS::ApiGateway::UsagePlan",
+            "DependsOn": "ApiGatewayDeployment1639805155254",
+            "Properties": {
+              "ApiStages": [
+                {
+                  "ApiId": {
+                    "Ref": "ApiGatewayRestApi"
+                  },
+                  "Stage": "dev"
+                }
+              ],
+              "Description": "Usage plan \"paid\" for myserverlessproject dev stage",
+              "UsagePlanName": "myserverlessproject-paid-dev",
+              "Quota": {
+                "Limit": 1000,
+                "Period": "MONTH"
+              },
+              "Throttle": {
+                "BurstLimit": 20,
+                "RateLimit": 10
+              }
+            }
+          },
+          "ApiGatewayUsagePlanKeyFree1": {
+            "Type": "AWS::ApiGateway::UsagePlanKey",
+            "Properties": {
+              "KeyId": {
+                "Ref": "ApiGatewayApiKeyFree1"
+              },
+              "KeyType": "API_KEY",
+              "UsagePlanId": {
+                "Ref": "ApiGatewayUsagePlanFree"
+              }
+            }
+          },
+          "ApiGatewayUsagePlanKeyPaid1": {
+            "Type": "AWS::ApiGateway::UsagePlanKey",
+            "Properties": {
+              "KeyId": {
+                "Ref": "ApiGatewayApiKeyPaid1"
+              },
+              "KeyType": "API_KEY",
+              "UsagePlanId": {
+                "Ref": "ApiGatewayUsagePlanPaid"
+              }
+            }
           },
           "GetUserLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
@@ -1456,6 +1600,7 @@
                 ],
                 "allowCredentials": false
               },
+              "private": true,
               "integration": "AWS_PROXY"
             }
           }
@@ -1491,6 +1636,7 @@
                 ],
                 "allowCredentials": false
               },
+              "private": true,
               "integration": "AWS_PROXY"
             }
           }
@@ -1526,6 +1672,7 @@
                 ],
                 "allowCredentials": false
               },
+              "private": true,
               "integration": "AWS_PROXY"
             }
           }
@@ -1561,6 +1708,7 @@
                 ],
                 "allowCredentials": false
               },
+              "private": true,
               "integration": "AWS_PROXY"
             }
           }
@@ -1596,6 +1744,7 @@
                 ],
                 "allowCredentials": false
               },
+              "private": true,
               "integration": "AWS_PROXY"
             }
           }
@@ -1667,7 +1816,7 @@
     "artifact": "C:\\Users\\brand\\myServerlessProject\\.serverless\\myserverlessproject.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639719788670-2021-12-17T05:43:08.670Z",
+    "artifactDirectoryName": "serverless/myserverlessproject/dev/1639805160056-2021-12-18T05:26:00.056Z",
     "artifact": "myserverlessproject.zip"
   }
 }
